@@ -57,7 +57,6 @@ namespace AudioPlayer
         static string folderPath = "";
         static string path = @"C:\music\loved";
         static int rndindex = 0;
-        List<string> fileNames = new List<string>();
         string[] files;
         BitmapImage cover;
         System.Timers.Timer timer = new System.Timers.Timer(1000);
@@ -334,9 +333,10 @@ namespace AudioPlayer
 
         private void BitmapImage()
         {
-            BitmapImage bitmap = new BitmapImage();
+            BitmapImage bitmap = new();
             bitmap.BeginInit();
-            bitmap.UriSource = new Uri(@"C:\Users\JolyGenious\Downloads\1234.png");
+            bitmap.UriSource = new Uri(@"1234.png", UriKind.Relative);
+            bitmap.CacheOption = BitmapCacheOption.OnLoad;
             bitmap.EndInit();
             ImageSong.Source = bitmap;
         }
@@ -463,7 +463,7 @@ namespace AudioPlayer
                     {
                         cover = new();
                         cover.BeginInit();
-                        cover.UriSource = new Uri(@"C:\Users\JolyGenious\Downloads\1234.png");
+                        cover.UriSource = new Uri(@"1234.png", UriKind.Relative);
                         cover.CacheOption = BitmapCacheOption.OnLoad;
                         cover.EndInit();
                     }

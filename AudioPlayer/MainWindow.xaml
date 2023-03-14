@@ -214,12 +214,7 @@
                             <TextBlock x:Name="NameSong" Foreground="GhostWhite" FontFamily="Impact" FontSize="10" Margin="15,7.5,15,7.5"></TextBlock>
                         </Viewbox>
                         <Viewbox Grid.Row="1" Grid.Column="1">
-                            <Image x:Name="ImageSong" Width="250" >
-                                <Image.Source>
-
-                                    <BitmapImage DecodePixelWidth="250"  
-                                   UriSource="C:\Users\JolyGenious\Downloads\1234.png" />
-                                </Image.Source>
+                            <Image x:Name="ImageSong" Width="300" >
                             </Image>
                         </Viewbox>
                         <MediaElement x:Name="mediaPlayer" LoadedBehavior="Manual" Grid.Row="2" Grid.ColumnSpan="3"></MediaElement>
